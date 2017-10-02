@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        В первом подъезде номера квартир от 1 до 20, во втором от 21 до 64, в третьем от 65 до 80. Пользователь вводит номер квартиры, необходимо указать в каком она подъезде.
+    </p>
+    <div>
+        <h3>Введите № квартиры</h3>
+        <input id="inFloat" type="text">
+        <button onclick="numbEntrance()">Узнать номер подезда</button>
+    </div>
+
+    <!--script code-->
+    <script>
+        function numbEntrance() {
+            var numbFloat = document.getElementById("inFloat").value;
+            numbFloat = parseInt(numbFloat);
+            console.log(numbFloat);
+
+            if (numbFloat < 21) {
+                alert("Подезд №1");
+            } else if (20 > numbFloat || numbFloat < 65) {
+                alert("Подезд №2");
+            } else if (65 > numbFloat || numbFloat < 81) {
+                alert("Подезд №3");
+            } else {
+                alert("Не верний № квартиры");
+            }
+        }
+    </script>
+    <!-- <script src="task3.js"></script> -->
+</body>
+
+</html>

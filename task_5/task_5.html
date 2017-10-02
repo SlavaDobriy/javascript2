@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Пользователь вводит 3 числа. Найти и вывести максимальное из данных трех чисел.
+    </p>
+    <div class="content" style="margin: 50px 300px;">
+        <p>Введите число №1</p>
+        <input type="text" id="one">
+        <p>Введите число №2</p>
+        <input type="text" id="two">
+        <p>Введите число №3</p>
+        <input type="text" id="thrue"><br>
+        <div style="margin-top: 20px;">
+            <button onclick="maxNumb()">Вывести максимальное число</button>
+        </div>
+    </div>
+
+    <!-- script code -->
+
+    <script>
+        function maxNumb() {
+            var a = document.getElementById(`one`).value;
+            var b = document.getElementById(`two`).value;
+            var c = document.getElementById(`thrue`).value;
+            a = parseInt(a);
+            b = parseInt(b);
+            c = parseInt(c);
+            // console.log(a, b, c);
+
+            if (isNaN(a && b && c)) {
+                alert("Введите число!!!");
+            } else if (a == b && b == c) {
+                alert("Числа равные!");
+            } else if (a > b && a > c) {
+                alert(a);
+            } else if (b > c) {
+                alert(b);
+            } else {
+                alert(c);
+            }
+        }
+    </script>
+</body>
+
+</html>

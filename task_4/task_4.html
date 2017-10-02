@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Два поля ввода: Логин и пароль. Есть 3 пользователя: ivan -> 333 ssss-> 666 gibs ->0000 Если введен правильный логин и пароль вывести “Добро пожаловать”, в противном случае - вывести “ошибка”.
+    </p>
+    <div class="content" style="margin: 50px;">
+        <h3>Введите логин</h3>
+        <input type="text" id="log">
+        <h3>Введите пароль</h3>
+        <input type="text" id="pass">
+        <div style="margin: 10px;">
+            <button onclick="isCorrect()">Вход</button>
+        </div>
+    </div>
+
+    <!--script code-->
+    <script>
+        function isCorrect() {
+            var login = document.getElementById(`log`).value;
+            var password = document.getElementById(`pass`).value;
+
+            var arrLog = [`ivan`, `ssss`, `gibs`];
+            var arrPass = [`333`, `666`, `0000`];
+
+            if (login === arrLog[0] && password === arrPass[0]) {
+                alert('Добро пожаловать');
+            } else if (login === arrLog[1] && password === arrPass[1]) {
+                alert('Добро пожаловать');
+            } else if (login === arrLog[2] && password === arrPass[2]) {
+                alert('Добро пожаловать');
+            } else {
+                alert('ошибка');
+            }
+        }
+    </script>
+</body>
+
+</html>

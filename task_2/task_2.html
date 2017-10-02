@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Пользователь вводит 2 числа. Найти и вывести максимальное из данных двух чисел. Учтите вариант равенства чисел.</p>
+    <div class="content">
+        <h3>Введите 1 число</h3>
+        <input id="one" type="text">
+        <h3>Введите 2 число</h3>
+        <input id="twoo" type="text">
+    </div>
+    <div class="chek" style="margin-top: 10px;">
+        <button onclick="takeNumber()">Вывести максимальное число</button>
+    </div>
+
+    <!--script code-->
+    <script>
+        function takeNumber() {
+            var x = document.getElementById(`one`).value;
+            var y = document.getElementById(`twoo`).value;
+            x = parseInt(x);
+            y = parseInt(y);
+
+            if (isNaN(x && y)) {
+                alert("Введите число!!!");
+            } else
+            if (x == y) {
+                alert("Числа равные!");
+            } else if (x > y) {
+                alert(x);
+            } else {
+                alert(y);
+            }
+        }
+    </script>
+
+    <!--<script src="main.js"></script>-->
+</body>
+
+</html>
